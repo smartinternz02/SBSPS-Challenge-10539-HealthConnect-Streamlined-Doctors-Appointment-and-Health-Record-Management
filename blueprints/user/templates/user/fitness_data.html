@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% include 'user/header.html' %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='dist/libs/prismjs/themes/prism-okaidia.min.css')}}">
+
+    <!-- --------------------------------------------------- -->
+    <!-- Select2 -->
+    <!-- --------------------------------------------------- -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='dist/libs/select2/dist/css/select2.min.css')}}">
+  <body>
+    <!-- Preloader -->
+    
+    <!-- --------------------------------------------------- -->
+    <!-- Body Wrapper -->
+    <!-- --------------------------------------------------- -->
+    <div class="page-wrapper" id="main-wrapper" data-layout="vertical" data-sidebartype="full" data-sidebar-position="fixed" data-header-position="fixed">
+      <!-- --------------------------------------------------- -->
+      <!-- Sidebar -->
+      <!-- --------------------------------------------------- -->
+      {% include 'user/sidebar-user.html' %}
+      <!-- --------------------------------------------------- -->
+      <!-- Main Wrapper -->
+      <!-- --------------------------------------------------- -->
+      <div class="body-wrapper">
+        <!-- --------------------------------------------------- -->
+        <!-- Header Start -->
+        <!-- --------------------------------------------------- -->
+
+        <!-- --------------------------------------------------- -->
+        <!-- Header End -->
+        <!-- --------------------------------------------------- -->
+
+<div class="container-fluid">
+
+      <!-- Employee Salary -->
+      <h4>Elevate Your Wellness: Attain Health Stability with a Continuous Calorie-Burning Streak🔥</h4>
+      <div class="row">
+        <div class="col-md-3">
+          <div class="col-md-12">
+          <div class="card">
+            <div class="card-body pb-0 mb-xxl-4 pb-1">
+              <p class="mb-1 fs-3">Current Streaks</p>
+              <h4  id ="streak"  class="fw-semibold fs-7"></h4>
+              <div class="d-flex align-items-center mb-3"> </div>
+           </div>
+        </div>
+    
+          <div class="form-check form-switch">
+            <input class="form-check-input" type="checkbox" id="add-notes">
+            <label class="form-check-label" for="medicallyApprovedToggle" style="font-weight:700 ;">Diabetes Prediction</label>
+          </div>
+       
+      </div>
+       </div>
+        <div class="col-md-3">
+          <div class="col-md-12">
+          <div class="card">
+            <div class="card-body pb-0 mb-xxl-4 pb-1">
+              <p class="mb-1 fs-3"> Today's Step Count 🏃‍♀️🏃‍♀️</p>
+              <div id="todaysteps" class="d-flex align-items-center mb-3"> </div>
+            </div>
+          </div>
+            <div class="card">
+              <div class="card-body">
+            <p class="mb-1 fs-3"> Badges Earned 🔖</p>
+            <div id="daily-badges" class="form-check form-switch">
+            </div>
+            </div></div>
+         
+        </div></div>
+        <div class="col-md-6">
+          <div class="card">
+            <div class="card-body pb-0 mb-xxl-4 pb-1"> 
+              <div id="milestoneGif" class="d-flex align-items-center mb-3"> </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+
+        <div class="row">
+      
+          <div class="col-md-6">
+      
+            <div class="card">
+      
+              <div class="card-body">
+              
+                <h5 class="card-title">Steps Count</h5>
+                <p class="card-subtitle">Walking Streak 🏃🏼 🏃🏼 🏃🏼</p>
+      
+                <div id="salary"></div>
+              
+              </div>
+            
+            </div>
+      
+          </div>
+      
+          <div class="col-md-6">
+      
+            <div class="card">
+      
+              <div class="card-body">
+              
+                <h5 class="card-title">Calories Burned</h5>
+                <p class="card-subtitle">🏋🏻🏋🏻🏋🏻🏋🏻</p>
+                  
+                <div id="salary1"></div>
+      
+      
+              </div>
+            
+            </div>
+      
+          </div>
+      
+        </div>
+
+        <div class="row">
+          <div class="col-md-6 col-lg-4 d-flex align-items-stretch">
+            <div class="card w-100">
+              <div class="card-body">
+                <div class="mb-4">
+                  <h5 class="card-title fw-semibold">Today's MileStone 🎯</h5>
+                  <p class="card-subtitle">Walk and Build your Health</p>
+                </div>
+                <ul class="timeline-widget mb-0 position-relative mb-n5">
+                  <li class="timeline-item d-flex position-relative overflow-hidden">
+                    <div class="timeline-time text-dark flex-shrink-0 text-end">Mile Stone 0🎯</div>
+                    <div class="timeline-badge-wrap d-flex flex-column align-items-center">
+                      <span class="timeline-badge border-0 border border-success flex-shrink-0 my-8"></span>
+                      <span class="timeline-badge-border d-block flex-shrink-0"></span>
+                    </div>
+                    <div class="timeline-desc fs-3 text-dark mt-n1 fw-semibold">Move a Head<a href="javascript:void(0)" class="text-primary d-block fw-normal ">#ML-0 Steps</a>
+                    </div>
+                  </li>
+                  <li class="timeline-item d-flex position-relative overflow-hidden">
+                    <div class="timeline-time text-dark flex-shrink-0 text-end">Mile Stone 1🎯</div>
+                    <div class="timeline-badge-wrap d-flex flex-column align-items-center">
+                      <span class="timeline-badge border-1 border border-warning flex-shrink-0 my-8"></span>
+                      <span class="timeline-badge-border d-block flex-shrink-0"></span>
+                    </div>
+                    <div class="timeline-desc fs-3 text-dark mt-n1 fw-semibold">Step Forward<a href="javascript:void(0)" class="text-primary d-block fw-normal ">#ML-6000 Steps</a>
+                    </div>
+                  </li>
+                  <li class="timeline-item d-flex position-relative overflow-hidden">
+                    <div class="timeline-time text-dark flex-shrink-0 text-end">Mile Stone 2🎯</div>
+                    <div class="timeline-badge-wrap d-flex flex-column align-items-center">
+                      <span class="timeline-badge border-2 border border-warning flex-shrink-0 my-8"></span>
+                      <span class="timeline-badge-border d-block flex-shrink-0"></span>
+                    </div>
+                    <div class="timeline-desc fs-3 text-dark mt-n1 fw-semibold">UnStoppable <a href="javascript:void(0)" class="text-primary d-block fw-normal ">#ML-8000 Steps</a>
+                    </div>
+                  </li>
+                  <li class="timeline-item d-flex position-relative overflow-hidden">
+                    <div class="timeline-time text-dark flex-shrink-0 text-end">Mile Stone 3🎯</div>
+                    <div class="timeline-badge-wrap d-flex flex-column align-items-center">
+                      <span class="timeline-badge border-3 border border-warning fw-bold flex-shrink-0 my-8"></span>                          
+                    </div>
+                    <div class="timeline-desc fs-3 text-dark mt-n1">irreplaceable<a class="text-primary d-block fw-normal ">#ML-10000 Steps</a></div>
+                  </li>
+                </ul>                  
+              </div>
+            </div>
+          </div>
+          
+      </div>
+    
+      <div class="modal fade" id="addnotesmodal" tabindex="-1" role="dialog" aria-labelledby="addnotesmodalTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content border-0">
+            <div class="modal-header bg-primary">
+              <h6 class="modal-title text-white">Diabeties Predictions</h6>
+              <button type="button" class="btn-close btn-close-white" id="close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <div class="notes-box">
+                <div class="notes-content">
+                  <form  method="post" action="/diabeticPrediction" enctype="multipart/form-data" id="addnotesmodalTitle">
+                    <div class="mb-3 row">
+                      <label for="example-text-input" class="col-md-2 col-form-label">No of Pregnancies</label>
+                      <div class="col-md-10">
+                        <input class="form-control" name=pregnancies type="number" placeholder="Total Pregnancy" id="example-number-input">
+                      </div>
+                    </div>
+                    <div class="mb-3 row">
+                      <label for="example-search-input" class="col-md-2 col-form-label">Glucose</label>
+                      <div class="col-md-10">
+                          <input class="form-control" name=glucose type="number" placeholder="Glucose levels(mg/dL)" id="example-number-input">
+                      </div>
+                    </div>
+                    <div class="mb-3 row">
+                      <label for="example-email-input" class="col-md-2 col-form-label">Blood Pressure</label>
+                      <div class="col-md-10">
+                          <input class="form-control" name=bloodpressure type="number" placeholder="Blood Pressure (mm Hg)" id="example-number-input">
+                      </div>
+                    </div>
+                    <div class="mb-3 row">
+                      <label for="example-url-input" class="col-md-2 col-form-label">Skin Thickness</label>
+                      <div class="col-md-10">
+                          <input class="form-control" name=skinthickness  type="number" placeholder="Skin Thickness (mm)" id="example-number-input">
+                      </div>
+                    </div>
+                    <div class="mb-3 row">
+                      <label for="example-tel-input" class="col-md-2 col-form-label">Insulin</label>
+                      <div class="col-md-10">
+                          <input class="form-control"  name=insulin type="number"placeholder="Insulin units" id="example-number-input">
+                      </div>
+                    </div>
+                    <div class="mb-3 row">
+                      <label for="example-password-input" class="col-md-2 col-form-label">BMI</label>
+                      <div class="col-md-10">
+                          <input class="form-control"  name=bmi type="text" placeholder="BMI (Body Mass Index) Value" id="example-number-input">
+                      </div>
+                    </div>
+                    <div class="mb-3 row">
+                      <label for="example-number-input" class="col-md-2 col-form-label">Diabeties Pedigree Function</label>
+                      <div class="col-md-10">
+                        <input class="form-control" name=dpf type="text"placeholder="Diabeties Pedigree Function" id="example-number-input">
+                      </div>
+                    </div>
+                    <div class="mb-3 row">
+                      <label for="example-datetime-local-input" class="col-md-2 col-form-label">Age</label>
+                      <div class="col-md-10">
+                          <input class="form-control" name=age type="number" placeholder="Age" id="example-number-input">
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="submit" class="btn btn-primary">Add</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+
+          </div>
+</div>
+</div>
+    <script src="{{ url_for('static', filename='dist/libs/apexcharts/dist/apexcharts.min.js') }}"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>  
+<!-- Your JavaScript code can now access the fitnessData variable -->
+<script>
+    // Function to update the chart with new data
+    function updateChart(dates, data) {
+        var salary = {
+            series: [
+                {
+                    name: "Steps Count",
+                    data: data,
+                    
+                },
+            ],
+
+    chart: {
+      toolbar: {
+        show: true,
+      },
+      height: 260,
+      type: "bar",
+      fontFamily: "Plus Jakarta Sans', sans-serif",
+      foreColor: "#adb0bb",
+    },
+    colors: ["#008000", "#008000", "#008000","#008000", "#008000", "#008000", "var(--bs-primary)"],
+    plotOptions: {
+      bar: {
+        borderRadius: 4,
+        columnWidth: "45%",
+        distributed: true,
+        endingShape: "rounded",
+      },
+    },
+
+    dataLabels: {
+      enabled: false,
+    },
+    legend: {
+      show: false,
+    },
+    grid: {
+      yaxis: {
+        lines: {
+          show: false,
+        },
+      },
+      xaxis: {
+        lines: {
+          show: false,
+        },
+      },
+    },
+    xaxis: {
+            categories: dates, 
+            axisBorder: {
+                show: false,
+            },
+            axisTicks: {
+                show: false,
+            },
+        },
+    };
+    var chart = new ApexCharts(document.querySelector("#salary"), salary);
+          chart.render();
+
+        }
+   function streakCalculate(calories)
+   {
+      let streak = JSON.parse('{{ streak| tojson | safe }}');
+      let age = JSON.parse('{{ age| tojson | safe }}');
+
+      if(streak == -1)
+      {
+        streak=0;
+        let i=0;
+        for(let i=0; i<calories.length;i++){
+        if(calories[i] >=6000 && age >= 60 ) {
+          streak=streak+1;
+
+        } 
+        else if(calories[i]>=8000 && age < 60)
+        {
+          streak=streak+1;
+
+        } 
+        else
+        {
+          streak=0;
+
+          console.log(age);
+        }
+      }
+    }
+    else{
+      if(calories[6]>=6000 && age>=60 ) {
+          streak++;
+
+        } 
+        else if(calories[6]>=8000 && age<60)
+        {
+          streak++;
+
+        } 
+        else
+        {
+          streak=0;
+
+        }
+      }
+      document.getElementById('streak').textContent = streak+'🔥';
+        fetch('/update_streak/'+streak)
+        .then(response => response.json())
+        .then( data => {
+          console.log('streak');
+        })
+
+        const dailyBadges = document.getElementById('daily-badges');
+
+    // Clear existing badge content
+    dailyBadges.innerHTML = '';
+
+    // Check streak count and display badges accordingly
+    if (streak >= 7) {
+        dailyBadges.innerHTML += '<img src="badge-7-days.png" alt="7-Day Streak Badge">';
+    }
+    if (streak >= 15) {
+        dailyBadges.innerHTML += '<img src="badge-15-days.png" alt="15-Day Streak Badge">';
+    }
+    if (streak >= 30) {
+        dailyBadges.innerHTML += '<img src="badge-30-days.png" alt="30-Day Streak Badge">';
+    }
+    if(streak<7){
+      dailyBadges.innerHTML += '<img src="badge-0-days.png" alt="Day Streak Badge">';
+    }
+      }
+function todaymlsteps(steps){
+
+  const milestones = [0, 6000, 8000, 10000];
+
+// Get current milestone 
+let milestoneIndex = 0;
+for(let i=0; i<milestones.length; i++) {
+  if(steps >= milestones[i]) {
+    milestoneIndex = i;
+  } else {
+    break;
+  }
+}
+// Update badge borders
+for(let i=1; i<=milestoneIndex; i++) {
+  document.querySelectorAll(".timeline-badge")[i].classList.replace("border-warning", "border-success"); 
+}
+
+// Show motivational gif  
+let gifSrc;
+if(milestoneIndex === 0) {
+  // Reached 0 steps
+  gifSrc = "https://media.giphy.com/media/GUOlg71URS8koymPbc/giphy.gif";
+
+} else if(milestoneIndex === 1) {
+  // Reached milestone 1
+  gifSrc = "https://media.giphy.com/media/5zf2M4HgjjWszLd4a5/giphy.gif";
+
+} else if(milestoneIndex === 2) {
+  // Reached milestone 2
+  gifSrc = "https://media.giphy.com/media/3og0IHyZMxZNkNOWT6/giphy.gif"; 
+
+} else if(milestoneIndex === 3) {
+  // Reached max milestone 3
+  gifSrc = "https://media.giphy.com/media/26DOoDwdNGKAg6UKI/giphy.gif";
+
+  let audio = new Audio('../../../static/dist/images/music/audio1.mp3');
+  audio.play();
+}
+
+// Display motivational gif
+document.getElementById("milestoneGif").innerHTML = `
+  <img src="${gifSrc}" alt="Motivational gif">  
+`;
+}
+  // Function to update the chart with new data
+  function updateChart1(dates1, data1) {
+      var salary = {
+          series: [
+              {
+                  name: "🏋🏻 🏃🏼",
+                  data: data1,
+              },
+          ],
+  chart: {
+    toolbar: {
+      show: true,
+    },
+    height: 260,
+    type: "bar",
+    fontFamily: "Plus Jakarta Sans', sans-serif",
+    foreColor: "#adb0bb",
+  },
+  colors: ["#008000", "#008000", "#008000","#008000", "#008000", "#008000", "var(--bs-primary)"],
+  plotOptions: {
+    bar: {
+      borderRadius: 4,
+      columnWidth: "45%",
+      distributed: true,
+      endingShape: "rounded",
+    },
+  },
+
+  dataLabels: {
+    enabled: false,
+  },
+  legend: {
+    show: false,
+  },
+  grid: {
+    yaxis: {
+      lines: {
+        show: false,
+      },
+    },
+    xaxis: {
+      lines: {
+        show: false,
+      },
+    },
+  },
+  xaxis: {
+          categories: dates1, 
+          axisBorder: {
+              show: false,
+          },
+          axisTicks: {
+              show: false,
+          },
+      },
+  };
+  var chart = new ApexCharts(document.querySelector("#salary1"), salary);
+        chart.render();
+      } 
+     var fitnessData = JSON.parse('{{ fitness_data | tojson | safe }}');
+      // Access the fitnessData variable and use it in your JavaScript code
+      var dates = Object.keys(fitnessData[0]);
+      var calories = Object.values(fitnessData[0]);
+          // Access the fitnessData variable and use it in your JavaScript code
+    var dates1 = Object.keys(fitnessData[1]);
+    var calories1 = Object.values(fitnessData[1]);
+    // Updating the chart with the received data
+    updateChart1(dates1, calories1);
+    // Updating the chart with the received data
+    updateChart(dates, calories);
+    todaymlsteps(7500)
+    streakCalculate(calories);
+const steps= 7500
+document.getElementById('todaysteps').textContent = steps.toString();
+const milestones = [0, 6000, 8000, 10000];
+  </script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+  $(document).ready(function() {
+    // Get a reference to the button
+    var addButton = $('#add-notes');
+  
+    // Listen for click event on the button
+    addButton.click(function() {
+      if (addButton.hasClass('active')) {
+        // If the button is already active (checked), uncheck it and hide the modal
+        addButton.removeClass('active');
+        $('#addnotesmodal').modal('hide');
+      } else {
+        // If the button is not active (unchecked), check it and show the modal
+        addButton.addClass('active');
+        $('#addnotesmodal').modal('show');
+      }
+    });
+  });
+  </script>
+ <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.18/dist/sweetalert2.all.min.js"></script>
+ <script>
+     function showErrorAlert(prediction) {
+         Swal.fire({
+             icon: 'info',
+             title: 'Predicted ',
+             text: prediction,
+             confirmButtonText: 'OK'
+         });
+     }
+
+     {% if prediction %}
+         showErrorAlert("{{ prediction }}");
+         window.location.href = '/fit_data';
+     {% endif %}
+</script>
+
+{% include 'user/footer.html' %}
+
+</body>
+</html>
