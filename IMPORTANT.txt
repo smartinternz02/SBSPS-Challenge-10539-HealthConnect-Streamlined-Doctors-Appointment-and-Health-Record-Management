@@ -1,0 +1,11 @@
+user login id: 567889976542
+password: 4321
+
+doctor login id: pranav
+password: 1705
+
+hospital login id: H
+password: 8767
+
+lab login id: lab
+password: 1234
