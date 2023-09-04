@@ -3,7 +3,7 @@
 
 HealthConnect is a cloud-based healthcare management platform that aims to improve the coordination of care by connecting patients, providers, and health records onto an integrated system for streamlined appointment scheduling, health record access, e-prescriptions, analytics, and enhanced patient engagement.
 
-Deployment Link: [Press Here] (https://healthconnect-2002sais-dev.apps.sandbox-m3.1530.p1.openshiftapps.com/)
+Deployment Link: https://healthconnect-2002sais-dev.apps.sandbox-m3.1530.p1.openshiftapps.com/
 
 # Key Value Proposition
 
